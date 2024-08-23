@@ -7,11 +7,11 @@
         <link rel="stylesheet" href="./all.css">
         <title>RTK agency</title>
     </head>
-    <body class="">
-        <div class="flex justify-between px-20 py-3  w-full">
+    <body class="lg:w-full md:w-full sm:w-1/2">
+        <div class="flex justify-between px-20 py-3 max-w-screen-lg mx-auto w-full">
             <div class=""><a href="index.html"><img class="w-28" src="../images/logo.png" alt="logo de RTK agency"></a></div>
-            <div class="sm:w-1/2">
-                <ul class="flex p-0 list-none sm:inline">
+            <div class="sm:flex hidden">
+                <ul class="flex p-0 list-none ">
                     <!-- <li>
                         <a href="index.html"><img src="images/logo.png" alt="logo de RTK agency"></a>
                     </li> -->
@@ -30,26 +30,53 @@
                     <a class=" px-4 py-1 text-center bg-orange text-white border-2 border-white rounded-lg hover:bg-black" href="">Contact us</a>
                 </ul>
             </div>
+            <div id="mobile-menu" class="hidden sm:hidden">
+                <ul class="flex flex-col items-center p-0 list-none">
+                    <li class="block min-w-0 no-underline">
+                        <a class="py-3 text-center text-orange" href="index.html">Home</a>
+                    </li>
+                    <li class="block min-w-0 no-underline">
+                        <a class="px-4 py-3 text-center" href="">About us</a>
+                    </li>
+                    <li class="block min-w-0 no-underline">
+                        <a class="px-4 py-3 text-center" href="">Services</a>
+                    </li>
+                    <li class="block min-w-0 no-underline">
+                        <a class="px-4 py-3 text-center" href="">Blog</a>
+                    </li>
+                    <li class="block min-w-0 no-underline">
+                        <a class="px-4 py-1 text-center bg-orange text-white border-2 border-white rounded-lg hover:bg-black" href="">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sm:hidden">
+                <button id="menu-btn" class="block focus:outline-none">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
         </div>
-        <section class="bg-blanc px-32 py-3">
-            <div class="flex mt-20">
-                <div class="w-1/2 py-14">
+        <section class="bg-blanc lg:px-32 md:px-4  py-3">
+            <div class="flex flex-col md:flex-row mt-20  ">
+                <div class="w-full  py-14 md:mr-4 md:ml-4 ">
                     <h1 class="text-4xl font-bold">Experienced <span class="text-orange">mobile and web</span> applications and website builders measuring</h1>
                     <p class="font-normal text-gris me-0.5">RTK AGENCY is a team of experienced mobile and web applications and website builders measuring dozens of completed projects. We build and develop mobile applications for several top platforms, including Android & IOS.</p>
-                    <div class="py-6">
+                    <div class=" sm:w-full  py-6">
                         <a class="m-4 px-4 py-3 text-center bg-orange text-white border-2 border-white rounded-lg  hover:bg-blanc hover:text-orange hover:border-orange hover:rounded-lg" href="">Contact us</a>
                         <a class="m-4 px-4 py-3 text-center bg-blanc text-orange border-2 border-orange rounded-lg hover:bg-blanc hover:text-black" href="">View more</a>
                     </div>
                 </div>
-                <div class="w-96  ">
-                    <img class="float-left ml-24 " src="../images/homme.jpg" alt="">
+                <div class="w-96 md-w-1/2 flex justify-center mt-8 md:mt-0 ">
+                    <img class="w-80 md:w-96 object-cover  " src="../images/homme.jpg" alt="">
                 </div>
             </div>
         </section>
         <section class="px-32 py-3">
-            <div class="text-center mx-6 p-4 ">
-                <h2 class="font-bold text-2xl">Lorem Ipsum is simply dummy text of the printing.</h2>
-                <p class="mx-6 my-6 px-44">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s</p>
+            <div class="text-center mx-6 p-4  md:text-left  ">
+                <h2 class="font-bold  md:text-3xl lg:text-4xl text-2xl">Lorem Ipsum is simply dummy text of the printing.</h2>
+                <p class="mx-6 my-6 max-w-screen-md">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s</p>
             </div>
             <div class="flex ">
                 <div class="mx-4 my-4">
@@ -184,5 +211,15 @@
                 <p>Copyright ® 2021 Lorem All rights Reserved</p>
             </div>
         </footer>
+
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+        
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+        
     </body>
 </html>
